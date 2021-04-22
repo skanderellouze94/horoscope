@@ -1,0 +1,15 @@
+import moviepy.editor as mp
+
+astrologicalSigns = ["aries","taurus","gemini","cancer","leo","virgo","libra","scorpio","sagittarius","capricorn","aquarius","pisces"]
+astrologicalSignsFr = ["Belier","Taureau","Gemeaux","Cancer","Lion","Vierge","Balance","Scorpion","Sagittaire","Capricorne","Verseau","Poissons"]
+for sign in astrologicalSigns:
+    audio = mp.AudioFileClip('D:\projects\py app\horoscope\Calm-relaxing-piano-music.mp3')
+    video1 = mp.VideoFileClip('D:\projects\py app\horoscope\\result\en\\'+sign+'.mp4')
+    final = video1.set_audio(audio)
+    final.write_videofile('D:\projects\py app\horoscope\\result\music\en\\'+sign+'.mp4',codec= 'mpeg4' ,audio_codec='libvorbis')
+
+for sign in astrologicalSignsFr:
+    audio = mp.AudioFileClip('D:\projects\py app\horoscope\Calm-relaxing-piano-music.mp3')
+    video1 = mp.VideoFileClip('D:\projects\py app\horoscope\\result\\fr\\'+sign+'.mp4')
+    final = video1.set_audio(audio)
+    final.write_videofile('D:\projects\py app\horoscope\\result\music\\fr\\'+sign+'.mp4',codec= 'mpeg4' ,audio_codec='libvorbis')
